@@ -1,0 +1,27 @@
+<h1>Listing Users </h1>
+
+<!-- Define a table header row to dislpay all the data from each user -->
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Petal ID</th>
+    <th>Access Token</th>
+    <th>Provider</th>
+    <th>Email</th>
+    <th>Name</th>
+  </tr>
+
+<!-- Define do loop to iterate through all the user entries in the database --> 
+<% @users.each do | user | %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.petal_id %></td>
+    <td><%= user.access_token %></td>
+    <td><%= user.provider %></td>
+    <td><%= user.email %></td>
+    <td><%= user.name %></td>
+  </tr>
+<% end %>
+</table>
+ 
+<br />

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  petal_id: MyString
+  access_toketn: MyString
+  provider: MyString
+  email: MyString
+  pass: MyString
+
+two:
+  petal_id: MyString
+  access_toketn: MyString
+  provider: MyString
+  email: MyString
+  pass: MyString
