@@ -22,8 +22,13 @@ class Product
   end
   
   #This method will initialize the attributes listed above
-  def initialize (attributes)
+  def initialize (attributes={})
     super   
+  end
+  
+  #Factory Girl expects this to be here
+  def new_record?
+    true
   end
   
   #This method returns all the products from a certain category

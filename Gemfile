@@ -44,8 +44,14 @@ end
 #Use Cucumber for tests
 group :development, :test do
   gem "rspec-rails", ">=2.0.1"
-  gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'faker', '~> 1.3.0'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'cucumber-rails'
 end
 
 # Use ActiveModel has_secure_password
