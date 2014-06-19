@@ -54,6 +54,9 @@ group :test do
   gem 'cucumber-rails'
 end
 
+#Use postgresql
+gem 'pg'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
