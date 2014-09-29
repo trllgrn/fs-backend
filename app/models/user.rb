@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   validates :petal_id, :access_token, :provider, :email, :name, presence: true
   validates :email, format: {with: /@/ }
+  has_many :orders
+  has_many :recipients
   
   def self.find_or_create_from_auth_hash(creds)
     #Try to find the user in the database first with email
