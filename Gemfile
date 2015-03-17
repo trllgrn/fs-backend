@@ -40,11 +40,14 @@ end
 
 #Use Cucumber for tests
 group :development, :test do
-  gem "rspec-rails", ">=2.0.1"
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker', '~> 1.3.0'
 end
+
 
 group :test do
   gem 'capybara'

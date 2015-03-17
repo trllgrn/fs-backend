@@ -11,10 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102032947) do
+ActiveRecord::Schema.define(version: 20140929195553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "messages", force: true do |t|
+    t.text   "content"
+    t.string "user_id"
+    t.string "order_id"
+  end
+
+  create_table "orders", force: true do |t|
+    t.string "user_id"
+    t.string "recipient_id"
+    t.string "message_id"
+    t.string "payment_id"
+    t.date   "delivery_date"
+    t.float  "total"
+  end
+
+  create_table "payments", force: true do |t|
+    t.string   "type"
+    t.integer  "user_id"
+    t.string   "card_number"
+    t.integer  "card_exp_mo"
+    t.integer  "card_exp_yr"
+    t.integer  "card_sec_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "payments", ["user_id"], name: "index_payments_on_user_id", using: :btree
+
+  create_table "recipients", force: true do |t|
+    t.string "name"
+    t.string "user_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "petal_id"

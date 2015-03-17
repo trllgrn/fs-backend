@@ -1,8 +1,8 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe User do
   it "has a valid factory" do
-    create(:user).should be_valid
+    expect(create(:user)).to be_valid
   end
   it "is invalid without an email address" do
     build(:user, email: nil).should_not be_valid
