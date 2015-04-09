@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   validates :email, format: {with: /@/ }
   has_many :orders
   has_many :recipients
+  has_many :payments
   
   def self.find_or_create_from_auth_hash(creds)
     #Try to find the user in the database first with email

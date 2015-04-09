@@ -1,9 +1,9 @@
 class CreateMessageTable < ActiveRecord::Migration
   def change
     create_table :messages do |t|
+      t.references :order_id
       t.text :content
-      t.string :user_id
-      t.string :order_id
+      t.timestamps
     end
   end
 end
