@@ -1,27 +1,28 @@
-== README
+== FS-Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What is FS-Backend?
 
-Things you may want to cover:
+Well...I'm glad you asked.  Oh, you didn't ask.  I'm gonna tell you anyway.
+I wanted to build an application that would allow you to send a bouquet of flowers to anyone using an Android app.  I found an API that would do most of the backend processing for me and all I would need to do was build the front end GUI. Perfect! There were a few problems:
 
-* Ruby version
+1. At the time I didn't know how to build front-ends.  I really wanted to build this for Android.  I thought I could write the GUI in HTML5 and just use WebViews to run the GUI.  I actually made a proof of concept of this using jQuery Mobile and PhoneGap. It was a bit clunky but it worked.  I'll put that project on GitHub one day.  Now, I can bulid native Android front ends thanks to Google/Udacity!
+2. The API was SOAP based.  Have you ever tried packaging and parsing XML calls/responses from http calls?  Then you don't know hell, my friend.  Since working with XML sucks, I wanted to wrap the XML reponses in velvety JSON.
 
-* System dependencies
+So, I built this backend on Rails.
 
-* Configuration
+I wanted it to do the following:
 
-* Database creation
+* Use Ruby! This uses Ruby version 2.0.0
 
-* Database initialization
+* Use Rails, This uses Rails version 4. something
 
-* How to run the test suite
+* Return JSON responses to API calls with the appropriate parameters
 
-* Services (job queues, cache servers, search engines, etc.)
+* Keep track of the orders I submitted to the API, to make sure I could reconcile my payout
 
-* Deployment instructions
+* Future functionality
 
-* ...
+I hope to resurrect this project soon.  Right now is very challenging because of work and my Android degree program.  I may incorporate it as part of that.  I have a capstone project to turn in.  
 
 
 Please feel free to use a different markup language if you do not plan to run
