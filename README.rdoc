@@ -22,8 +22,3 @@ I wanted it to do the following:
 
 * Future functionality
 
-I hope to resurrect this project soon.  Right now is very challenging because of work and my Android degree program.  I may incorporate it as part of that.  I have a capstone project to turn in.  
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
